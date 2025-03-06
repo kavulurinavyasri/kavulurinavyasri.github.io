@@ -5,12 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Zoom effect for images */
+        img {
+          transition: transform 0.3s ease; /* Smooth zoom-in effect */
+        }
+      
+        img:hover {
+          transform: scale(1.1); /* Zoom by 10% on hover */
+        }
+      
+        /* Zoom effect for entire section or cards */
+        .zoom-card {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+      
+        .zoom-card:hover {
+          transform: scale(1.05); /* Slightly zoom-in */
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+        }
+        </style>
 </head>
 <body class="bg-gradient-to-r from-[#98FF98] via-[#FFDAB9] to-[#E6E6FA] min-h-screen">
 
     <!-- Header -->
     <header class="bg-[#FFDAB9] text-[#4B0082] p-6 shadow-lg text-center">
-        <h1 class="text-5xl font-extrabold animate-bounce">Portfolio</h1>
+        <h1 class="text-5xl font-extrabold animate-bounce"> My Portfolio</h1>
     </header>
 
     <main class="p-10 md:p-20">
@@ -29,20 +49,20 @@
         <section class="bg-white rounded-xl shadow-lg p-6 mb-8">
             <h2 class="text-3xl font-bold text-center text-[#FFDAB9] mb-4">Education</h2>
             <div class="flex flex-col md:flex-row gap-6 justify-center">
-                <div class="bg-[#98FB98] p-5 rounded-xl shadow-md w-full md:w-1/3 text-center">
+                <div class="bg-[#98FB98] p-5 rounded-xl shadow-md w-full md:w-1/3 text-center zoom-card">
                     <h3 class="text-xl font-semibold text-[#2E8B57]">Sasi Institute of Technology and Engineering</h3>
                     <p>B.Tech | 2023-2027</p>
                     <p class="text-[#006400]">CGPA: 7.9</p>
                 </div>
-                <div class="bg-[#FFDAB9] p-5 rounded-xl shadow-md w-full md:w-1/3 text-center">
+                <div class="bg-[#FFDAB9] p-5 rounded-xl shadow-md w-full md:w-1/3 text-center zoom-card">
                     <h3 class="text-xl font-semibold text-[#D2691E]">Aditya Junior College</h3>
                     <p>Intermediate | 2021-2023</p>
                     <p class="text-[#8B4513]">Marks: 956</p>
                 </div>
-                <div class="bg-[#E6E6FA] p-5 rounded-xl shadow-md w-full md:w-1/3 text-center">
+                <div class="bg-[#E6E6FA] p-5 rounded-xl shadow-md w-full md:w-1/3 text-center zoom-card">
                     <h3 class="text-xl font-semibold text-[#4B0082]">B.V.M High School</h3>
                     <p>SSC | 2021</p>
-                    <p class="text-[#6A5ACD]">Marks: 556</p>
+                    <p class="text-[#6A5ACD]">Marks: 551</p>
                 </div>
             </div>
         </section>
@@ -56,7 +76,7 @@
         </h2>
         
             <div class="flex flex-col md:flex-row gap-6 justify-center">
-                <div class="bg-[#98FB98] p-5 rounded-xl shadow-md w-full md:w-1/2 text-center">
+                <div class="bg-[#98FB98] p-5 rounded-xl shadow-md w-full md:w-1/2 text-center zoom-card">
                     <h3 class="text-xl font-semibold text-[#2E8B57]">Skills</h3>
                     
                     <div class="flex justify-center space-x-20 mt-4"> 
@@ -79,7 +99,7 @@
                   
                   
                 </div>
-                <div class="bg-[#FFDAB9] p-5 rounded-xl shadow-md w-full md:w-1/2 text-center">
+                <div class="bg-[#FFDAB9] p-5 rounded-xl shadow-md w-full md:w-1/2 text-center zoom-card">
                     <h3 class="text-xl font-semibold text-[#D2691E]"> My Project</h3>
                     <p class="text-gray-700 mt-4">A fully responsive and interactive portfolio website using HTML and CSS.Designed and developed to showcase my skills, projects in visually appealing way.The website features a responsive design and an elegant color scheme using Mint Green, Peach, and Lavender for a modern look.</p>
                 </div>
@@ -90,19 +110,19 @@
         <section class="bg-white rounded-xl shadow-lg p-6 mb-8">
             <h2 class="text-3xl font-bold text-center text-[#E6E6FA] mb-4">Contact</h2>
             <div class="flex flex-col items-center space-y-4">
-                <div class="bg-[#98FB98] p-4 rounded-xl shadow-md w-full max-w-md text-center">
+                <div class="bg-[#98FB98] p-4 rounded-xl shadow-md w-full max-w-md text-center zoom-card">
                     <h2 class="text-xl font-semibold text-[#2E8B57]">Phone Number</h2>
                     <p class="text-gray-700">+91 6300311321</p>
                 </div>
-                <div class="bg-[#FFDAB9] p-4 rounded-xl shadow-md w-full max-w-md text-center">
+                <div class="bg-[#FFDAB9] p-4 rounded-xl shadow-md w-full max-w-md text-center zoom-card">
                     <h2 class="text-xl font-semibold text-[#D2691E]">Email</h2>
                     <p><a href="mailto:navyasri.kavuluri@sasi.ac.in" class="text-[#8B4513] hover:underline">mail id</a></p>
                 </div>
-                <div class="bg-[#E6E6FA] p-4 rounded-xl shadow-md w-full max-w-md text-center">
+                <div class="bg-[#E6E6FA] p-4 rounded-xl shadow-md w-full max-w-md text-center zoom-card">
                     <h2 class="text-xl font-semibold text-[#4B0082]">LinkedIn</h2>
                     <p><a href="https://www.linkedin.com/in/navya-sri-kavuluri-3ab407293/" class="text-[#6A5ACD] hover:underline">profile</a></p>
                 </div>
-                <div class="bg-[#98FB98] p-4 rounded-xl shadow-md w-full max-w-md text-center">
+                <div class="bg-[#98FB98] p-4 rounded-xl shadow-md w-full max-w-md text-center zoom-card">
                     <h2 class="text-xl font-semibold text-[#2E8B57]">GitHub</h2>
                     <p><a href="https://github.com/kavulurinavyasri" class="text-[#006400] hover:underline">profile</a></p>
                 </div>
