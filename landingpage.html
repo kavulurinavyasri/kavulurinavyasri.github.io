@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attractive Places in Rajahmundry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, #ffecd2, #fcb69f);
+            color: #333;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            color: #fff;
+        }
+        .background-animation {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+        .bubble {
+            position: absolute;
+            bottom: -50px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: floatUp 10s infinite ease-in-out;
+        }
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) scale(1.5);
+                opacity: 0;
+            }
+        }
+        .floating {
+            animation: floatAnimation 3s ease-in-out infinite;
+        }
+        @keyframes floatAnimation {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .scroll-reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            color: #444;
+            border-radius: 10px;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <section class="hero-section">
+        <div class="background-animation" id="background-animation"></div>
+        <div class="relative z-10 px-6 floating">
+            <h1 class="text-5xl md:text-7xl font-extrabold drop-shadow-lg">Discover Rajahmundry</h1>
+            <p class="text-lg md:text-2xl mt-4 drop-shadow-md">A City of Culture, Nature & Timeless Beauty</p>
+            <a href="#places" class="mt-6 inline-block bg-white text-pink-600 px-8 py-3 text-lg rounded-full shadow-lg transition">Explore Now</a>
+        </div>
+    </section>
+    
+    <section id="places" class="py-16 px-6 text-center">
+        <h2 class="text-4xl font-bold scroll-reveal">Top Attractions in Rajahmundry</h2>
+        <p class="mt-2 text-lg scroll-reveal">Experience the grandeur of the Godavari and its cultural heritage</p>
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+            <div class="card rounded-lg shadow-lg overflow-hidden transition scroll-reveal">
+                <img class="w-full h-56 object-cover" src="https://upload.wikimedia.org/wikipedia/commons/6/66/Godavari_Bridge.jpg" alt="Godavari Bridge">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold">Godavari Bridge</h3>
+                    <p class="text-gray-600">An architectural marvel offering breathtaking views</p>
+                </div>
+            </div>
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden transition">
+                <img class="w-full h-56 object-cover" src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2024/01/01/6aaa98de2021f806f3465e20f4fd3242_1000x1000.png" alt="Iskcon Temple">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold">Iskcon Temple</h3>
+                    <p class="text-gray-600">A spiritual sanctuary with divine architecture</p>
+                </div>
+            </div>
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden transition">
+                <img class="w-full h-56 object-cover" src="https://static.toiimg.com/thumb/resizemode-72,width-1280,height-720,msid-100229567/100229567.jpg" alt="Kambala Park">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold">Kambala Park</h3>
+                    <p class="text-gray-600">A lush green oasis for relaxation and leisure</p>
+                </div>
+            </div>
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden transition">
+                <img class="w-full h-56 object-cover" src="https://worldtraveladvisors.wordpress.com/wp-content/uploads/2013/06/rallabandi-subbarao-government-museum.jpg?w=584" alt="Rallabandi Subba Rao Museum">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold">Rallabandi Subba Rao Museum</h3>
+                    <p class="text-gray-600">A showcase of Rajahmundry’s rich history and culture</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-10 flex justify-center gap-10 flex-wrap">
+            
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden transition">
+                <img class="w-full h-56 object-cover" src="https://assets.thehansindia.com/h-upload/2024/07/22/1464293-dowleswaram.webp" alt="Dowleswaram Barrage">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold">Dowleswaram Barrage</h3>
+                    <p class="text-gray-600">A picturesque spot for watching the sunset over the river</p>
+                </div>
+            </div>
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden transition">
+                <img class="w-full h-56 object-cover" src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2024/01/01/7d70aeb44fb38fbcaf6c41fa6d7ef193_400x400.jpg" alt="Kotilingeshwara Temple">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold">Kotilingeshwara Temple</h3>
+                    <p class="text-gray-600">A sacred temple known for its serene ambiance</p>
+                </div>
+            </div>
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden transition">
+                <img class="w-full h-56 object-cover" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/fe/f8/29/the-beautiful-mountain.jpg?w=900&h=500&s=1" alt="Maredumilli Forests">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold">Maredumilli Forests</h3>
+                    <p class="text-gray-600">A nature retreat with dense forests and waterfalls</p>
+                </div>
+            
+            </div>
+        </div>
+    
+        
+    </section>
+
+
+    <section id="foods" class="py-16 px-6 text-center">
+        <h2 class="text-4xl font-bold scroll-reveal">Famous Foods in Rajahmundry</h2>
+        <p class="mt-2 text-lg scroll-reveal">Taste the authentic flavors of Andhra cuisine</p>
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden transition scroll-reveal">
+                <img class="w-full h-56 object-cover" src="https://content.jdmagicbox.com/comp/rajahmundry/w4/9999px883.x883.230130122747.m7w4/catalogue/sai-sri-lakshmi-nethi-pootharekulu-rajahmundry-city-rajahmundry-putharekulu-manufacturers-e22zoag333.jpg" alt="Pootharekulu">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold">Pootharekulu</h3>
+                    <p class="text-gray-600">A delicate "paper sweet" made from rice starch, jaggery, and nuts.</p>
+                </div>
+            </div>
+            
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden transition scroll-reveal">
+                <img class="w-full h-56 object-cover" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj69RpkO9qgvpd_YgAcx8QO3Eb2NGZlCXABtzo-OXNlA6RwaQlRQAcF7owr7CPXCZRaXKjWaO5JJ4Mf3ukFJaf8TysnJW7C6-vEWw7DAMkH_VLDAZuJQmrK9OewqyZfH20a_QOIiUwds1A/s2048/g.JPG" alt="Pulasa Fish Curry">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold">Pulasa Fish Curry</h3>
+                    <p class="text-gray-600">A rare and exquisite dish, best enjoyed during monsoons.</p>
+                </div>
+            </div>
+    
+        
+    
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden transition scroll-reveal">
+                <img class="w-full h-56 object-cover" src="https://wetrackon.s3.ap-southeast-1.amazonaws.com/image_upload/offr_img_1609157686078.jpeg" alt="kakinada kaja">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold">Kakinada Kaja</h3>
+                    <p class="text-gray-600">A popular sweet from the nearby Kakinada region, often enjoyed in Rajahmundry. </p>
+                </div>
+            </div>
+    
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden transition scroll-reveal">
+                <img class="w-full h-56 object-cover" src="https://static.wixstatic.com/media/db9888_d7cbf2b1ccb340ebb2d75e4dc077ece8~mv2.png/v1/fill/w_298,h_298,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/125518463_201538684803774_50312224195190.png" alt="Rose milk">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold">Rose Milk</h3>
+                    <p class="text-gray-600"> A refreshing and popular beverage, especially during the hot months. </p>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+
+    <section id="festival" class="py-16 px-6 text-center">
+        <h2 class="text-4xl font-bold scroll-reveal">Famous Festival in Rajahmundry</h2>
+        <p class="mt-2 text-lg scroll-reveal ">Godavari Pushkaralu</p>
+        <div class="flex justify-center p-5 ">
+    <div class=" card bg-white rounded-md shadow-lg  p-4">
+        <div class="flex justify-center space-x-6">
+            <div class="overflow-hidden rounded-lg shadow-lg  transform hover:scale-105">
+                <img class="w-80 h-56 object-cover" src="https://content.tupaki.com/twdata/2015/0715/photos/events/Highlights%20of%20Godavari%20pushkaralu%202015%20Photos/normal/Highlights%20of%20Godavari%20pushkaralu%202015%20Photos_35.jpg" alt="Godavari Pushkaralu Image 1">
+            </div>
+            
+            <div class="overflow-hidden rounded-lg shadow-lg transition transform hover:scale-105">
+                <img class="w-80 h-56 object-cover" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/b3b70d28382287.55bd2495dd86a.jpg" alt="Godavari Pushkaralu Image 2">
+            </div>
+        </div>
+        <div class="p-5">
+            <h3 class="text-xl font-semibold"> Godavari Pushkaralu</h3>
+            <p class="text-gray-600" style="text-align: center;"> This is a major river festival held every 12 years, attracting thousands of pilgrims to the Godavari River for a sacred bath.  </p>
+       
+             </div>
+    </div>
+        </div>
+    </section>
+   
+
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".scroll-reveal");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            }, { threshold: 0.2 });
+            elements.forEach(element => observer.observe(element));
+
+            // Generate floating bubbles dynamically
+            const background = document.getElementById("background-animation");
+            for (let i = 0; i < 20; i++) {
+                let bubble = document.createElement("div");
+                bubble.classList.add("bubble");
+                let size = Math.random() * 50 + 20;
+                bubble.style.width = `${size}px`;
+                bubble.style.height = `${size}px`;
+                bubble.style.left = `${Math.random() * 100}%`;
+                bubble.style.animationDuration = `${Math.random() * 10 + 5}s`;
+                background.appendChild(bubble);
+            }
+        });
+    </script>
+    <footer class=" text-white text-center p-6 mt-10" style="background-color: #fcb69f;">
+        <p class="text-lg">© 2025 Rajahmundry Tourism | All Rights Reserved</p>
+    </footer>
+
+
+    <button id="backToTop" class="fixed bottom-5 right-5  text-black p-3 rounded-full shadow-lg hidden" style="background-color: #ffecd2;">
+        ↑
+    </button>
+    
+    <script>
+        const backToTop = document.getElementById("backToTop");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.remove("hidden");
+            } else {
+                backToTop.classList.add("hidden");
+            }
+        });
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+    
+    
+</body>
+</html>
